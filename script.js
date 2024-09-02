@@ -78,7 +78,6 @@ function substituiNome(){
     }
 }
 substituiNome();
-// removemos o mostraPergunta();
 mostraPergunta();
 
 
