@@ -121,23 +121,18 @@ function respostaSelecionada(opcaoSelecionada) {
   atual++;
   mostraPergunta();
 }
-
-
 function mostraResultado() {
-  caixaPerguntas.textContent = "Em 2049...";
-  textoResultado.textContent = historiaFinal;
-  caixaAlternativas.textContent = "";
+        caixaPerguntas.textContent = "Em 2049...";
+        textoResultado.textContent = historiaFinal;
+        caixaAlternativas.textContent = "";
+        botaoJogarNovamente.addEventListener("click", jogaNovamente());
 }
-
+function jogaNovamente(){
+        atual = 0;
+        historiaFinal = "";
+        mostraPergunta();
+}
 mostraPergunta();
 
 
-enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que… alternativas: [
-  {
-      texto: "Isso é assustador!",
-      afirmacao: "No início ficou com medo do que essa tecnologia pode fazer.
-  {
-      texto: "Isso é maravilhoso!",
-      afirmacao: "Quis saber como usar IA no seu dia a dia."
-  }
-  ]
+
