@@ -114,12 +114,17 @@ function mostraAlternativas(){
     }
 }
 
-
 function respostaSelecionada(opcaoSelecionada) {
-  const afirmacoes = opcaoSelecionada.afirmacao;
-  historia += afirmacoes + "";
-  atual++;
-  mostraPergunta();
+    const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
+    historiaFinal += afirmacoes + " ";
+    if(opcaoSelecionada.proxima !== undefined){
+        atual = opcaoSelecionada.proxima;
+    }else{
+        mostraResultado();
+        return;
+    }
+    mostraPergunta();
+    
 }
 function mostraResultado() {
    caixaPerguntas.textContent = `Em 2049, ${nome}`;
